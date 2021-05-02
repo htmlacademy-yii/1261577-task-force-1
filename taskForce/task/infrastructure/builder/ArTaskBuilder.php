@@ -30,6 +30,7 @@ class ArTaskBuilder
         $task->address = $model->address;
         $task->budget = $model->budget;
         $task->dateCreate = $model->created_at;
+        $task->deadline = $model->deadline;
         $task->category = $categoryBuilder->build($model->category);
         $task->status = $statusBuilder->build($model->status);
         $location = new Location();

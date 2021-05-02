@@ -5,6 +5,7 @@ namespace taskForce\user\domain;
 use DateTime;
 use taskForce\category\domain\CategoriesList;
 use taskForce\share\StringHelper;
+use yii\validators\DateValidator;
 
 class User
 {
@@ -63,6 +64,16 @@ class User
      */
     public $cityId;
 
+    /**
+     * @var string
+     */
+    public $email;
+
+    /**
+     * @var DateTime
+     */
+    public $birthday;
+
     public function toArray()
     {
         return [
@@ -76,6 +87,8 @@ class User
             'categories' => $this->categories->toArray(),
             'detail' => $this->detail->toArray(),
             'city_id' => $this->cityId,
+            'email' => $this->email,
+            'birthday' => date('d.m.Y',strtotime($this->birthday)),
         ];
     }
 

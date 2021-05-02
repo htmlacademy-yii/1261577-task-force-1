@@ -4,6 +4,7 @@ use yii\helpers\Url;
 
 $logoutUrl = Url::to(['logout/']);
 $currentUser = Yii::$app->user->identity->name;
+$myList = Url::to(['my-list/new']);
 ?>
 <div class="header__town">
     <select class="multiple-select input town-select" size="1" name="town[]">
@@ -43,7 +44,7 @@ $currentUser = Yii::$app->user->identity->name;
 <div class="account__pop-up">
     <ul class="account__pop-up-list">
         <li>
-            <a href="#">Мои задания</a>
+            <a href="<?= $myList; ?>">Мои задания</a>
         </li>
         <li>
             <a href="#">Настройки</a>

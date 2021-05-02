@@ -16,6 +16,7 @@ class ArStatusBuilder
         $status = new Status();
         $status->id = $model->id;
         $status->name = $model->name;
+        $status->translation = $model->translation;
 
         return $status;
     }

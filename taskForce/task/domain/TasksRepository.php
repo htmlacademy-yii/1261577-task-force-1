@@ -27,4 +27,8 @@ interface TasksRepository
     public function setFailTaskStatus(int $task_id): void;
 
     public function setTaskStatus(string $status, int $task_id): void;
+
+    public function getUsersTasksByStatus(string $status, int $user_id): TasksList;
+
+//    public function getOverdueTasksWithNewStatus(): TasksList;
 }

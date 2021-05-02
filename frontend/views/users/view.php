@@ -10,6 +10,7 @@ $this->title = 'Detail user';
 //TODO разобраться с количеством звёзд рейтинга
 //TODO адрес, возраст
 //TODO как сделать объект countable?
+//TODO Корявые ссылки в отзывах
 ?>
 
 <section class="content-view">

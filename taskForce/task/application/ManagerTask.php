@@ -169,4 +169,8 @@ class ManagerTask
         $this->task->setTaskStatus($status, $task_id);
     }
 
+    public function getUsersTasksByStatus(string $status, int $user_id): TasksList
+    {
+        return $this->task->getUsersTasksByStatus($status,$user_id);
+    }
 }

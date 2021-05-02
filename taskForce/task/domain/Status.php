@@ -15,6 +15,11 @@ class Status
     public $name;
 
     /**
+     * @var string
+     */
+    public $translation;
+
+    /**
      * Status constructor.
      * @param int|null $id
      * @param string|null $name
@@ -30,6 +35,7 @@ class Status
         return [
             'id' => $this->id,
             'name' => $this->name,
+            'translation' => $this->translation,
         ];
     }
 

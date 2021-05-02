@@ -42,8 +42,11 @@ class ArUserBuilder
             $contacts->email = $model->email;
             $contacts->phone = $model->phone;
             $contacts->skype = $model->skype;
+            $contacts->telegram = $model->telegram;
         }
         $user->contacts = $contacts;
+        $user->email = $model->email;
+        $user->birthday = $model->birthday;
 
         return $user;
     }

@@ -16,6 +16,7 @@ use yii\web\IdentityInterface;
  * @property string|null $birthday
  * @property string|null $phone
  * @property string|null $skype
+ * @property string|null $telegram
  * @property string|null $about
  * @property string $password
  * @property string|null $address
@@ -65,7 +66,7 @@ class User extends ActiveRecord implements IdentityInterface
             [['about', 'address'], 'string'],
             [['view_count', 'is_hidden', 'city_id', 'role_id', 'has_review'], 'integer'],
             [['rating'], 'number'],
-            [['name', 'email', 'phone', 'skype', 'password', 'avatar'], 'string', 'max' => 255],
+            [['name', 'email', 'phone', 'skype', 'password', 'avatar','telegram'], 'string', 'max' => 255],
             [['email'], 'unique'],
             [['city_id'], 'exist', 'skipOnError' => true, 'targetClass' => City::class, 'targetAttribute' => ['city_id' => 'id']],
             [['role_id'], 'exist', 'skipOnError' => true, 'targetClass' => Role::class, 'targetAttribute' => ['role_id' => 'id']],
@@ -96,6 +97,7 @@ class User extends ActiveRecord implements IdentityInterface
             'last_activity' => 'Last Activity',
             'rating' => 'Rating',
             'has_review' => 'Has Review',
+            'telegram' => 'Telegram',
         ];
     }
 

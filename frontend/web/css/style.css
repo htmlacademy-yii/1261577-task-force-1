@@ -595,7 +595,7 @@ footer {
       -ms-user-select: none;
           user-select: none;
   padding-left: 26px;
-  px; }
+}
 
 .input {
   color: #8F9BB2;
@@ -1706,8 +1706,20 @@ footer {
 .done-status {
   background-color: #00b894; }
 
+.complete-status {
+  background-color: #00b894; }
+
+.job-status {
+  background-color: #b8af11; }
+
 .new-status {
   background-color: #ff7f50; }
+
+.cancel-status {
+  background-color: #e306ff; }
+
+.fail-status {
+  background-color: #ff1029; }
 
 .my-list__bottom {
   display: -webkit-box;
